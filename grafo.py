@@ -51,11 +51,3 @@ g.addAresta(Aresta(g.getVertice(2),g.getVertice(3)))
 g.addAresta(Aresta(g.getVertice(0),g.getVertice(0)))
 for x in g.matrizAdjacencia():
     print(*x)
-
-dicionario={
-    'vertice1': '1',    
-    'vertice2': '2',
-    'vertice3': '3',
-}
-dicionario.pop('vertice1')
-print(dicionario)
