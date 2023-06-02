@@ -1,42 +1,58 @@
 class Vertice:
     def __init__(self, nome):
-        self.nome = nome
+        self.__nome = nome
 
 class Aresta:
     def __init__(self, partida, chegada):
-        self.partida = partida
-        self.chegada = chegada
+        self.__partida = partida
+        self.__chegada = chegada
+        self.__Coordenada = (self.__partida, self.__chegada)
 
-class Grafo:
+class Grafo(Aresta(partida, chegada), Vertice(nome)):
     def __init__(self):
-        self.arestas = []
-        self.vertices = []
+        self.arestas = [Aresta(partida, chegada)]
+        self.vertices = [Vertice(nome)]
         self.numVertices = 0
         self.numArestas = 0
 
     def addVertice(self, vertice):
-        self.vertices.append(vertice)
+        self.vertices.append(vertice) 
         self.numVertices += 1
 
     def addAresta(self, partida, chegada):
         self.arestas.append(Aresta(partida,chegada))
         #self.numArestas += 1
+    def PrintGrafo(self, Aresta, Vertice):
+        print("Array de aresta: ", self.arestas,", ","")
+        print("\nArray de vertices", self.vertices,", ")
 
-    def matrizAdjacencia(self):
+'''    
+    def ListaAdjacencia():
+
+    def GrauVertice(self, arestas):
+        self.arestas = arestas
+
+    def GrauMedioGrafo():
+    
+    def BuscaProf():
+    
+    def BuscaLarg():'''
+
+'''def matrizAdjacencia(self):
         self.dicionario = {}
         
         #criar dicionario
         #criar um for para listar a posicao dos vertices
         self.matriz = [[0]*self.numVertices for _ in range(self.numVertices)]
-        '''
+        
         for x in self.arestas:
             vP = x.getPartida().getId()
             vC = x.getChegada().getId()
             self.matriz[vP][vC] += 1
             if vP != vC:
                 self.matriz[vC][vP] += 1
-        '''
-        return self.matriz
+        
+        return self.matriz'''
 g = Grafo()
 g.addVertice(Vertice('v1'))
 g.addVertice(Vertice('v2'))
@@ -57,5 +73,5 @@ dicionario={
     'vertice2': '2',
     'vertice3': '3',
 }
-dicionario.pop('vertice1')
-print(dicionario)
+#dicionario.pop('vertice1')
+#print(dicionario)
