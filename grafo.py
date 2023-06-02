@@ -4,11 +4,11 @@ class Vertice:
 
 class Aresta:
     def __init__(self, partida, chegada):
-        self.__partida = partida
-        self.__chegada = chegada
-        self.__Coordenada = (self.__partida, self.__chegada)
+        self.partida = partida
+        self.chegada = chegada
+        self.Coordenada = (self.partida, self.chegada)
 
-class Grafo(Aresta(partida, chegada), Vertice(nome)):
+class Grafo(Aresta(Aresta, chegada), Vertice(nome)):
     def __init__(self):
         self.arestas = [Aresta(partida, chegada)]
         self.vertices = [Vertice(nome)]
