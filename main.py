@@ -215,10 +215,18 @@ for vertice, adjacencias in g.listAdjacencia().items():
     print(f"{adjacente} ({aresta})", end=" ")
   print()
 print("------------------------------------------------")
+<<<<<<< HEAD
 for x, y in g.BuscaLargura(v1).items():
+=======
+for x, y in g.BuscaLargura(v1).items():
+>>>>>>> ff9295e1b3d076b14b46c25e6fb4cc91a36bedff
   print("Vertice: ", x.nome, "Cor:", y.cor, "Distancia:", y.d)
 print("------------------------------------------------")
 for x, y in g.BuscaProfundidade().items():
   print("Vertice: ", x.nome, "Cor:", y.cor, "Tempo Incial:", y.inicial,
         "Tempo Final", y.final)
+<<<<<<< HEAD
 print("------------------------------------------------")
+=======
+print("------------------------------------------------")
+>>>>>>> ff9295e1b3d076b14b46c25e6fb4cc91a36bedff
